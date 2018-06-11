@@ -34,6 +34,7 @@ class ApiRoute(actor: ActorRef) extends JsonSupport {
         onSuccess(eventIngested) { performed =>
           println("Created user [{}]: {}", appEvent.name, performed.description)
           complete((StatusCodes.Created, performed))
+          // b
         }
       }
     }
